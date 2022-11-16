@@ -28,13 +28,13 @@ const config: GatsbyConfig = {
         ],
       },
     },
-    {
-      resolve: `gatsby-source-rss-feed`,
-      options: {
-        name: `Mastodon`,
-        url: `https://xn--69aa8bzb.xn--y9a3aq/@gurgen.rss`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-rss-feed`,
+    //   options: {
+    //     name: `Mastodon`,
+    //     url: `https://xn--69aa8bzb.xn--y9a3aq/@gurgen.rss`,
+    //   },
+    // },
   ],
 };
 
