@@ -86,7 +86,7 @@ First of all we need to create a setup script that creates the necessary collect
 
 inside `src/scripts/setup.ts` write this:
 
-```ts
+```typescript
 import { db } from "@arangodb";
 
 const documents: [string] = ["users"];
@@ -138,7 +138,7 @@ Now that we have everything set up, we can move forward and create our first eve
 You can see the example route in `src/routes/hello.ts`.
 Before we extend this with a POST request that creates a user, let's update our setup script to add unique index on the `username` field.
 
-```ts
+```typescript
 // src/scripts/setup.ts
 /* ... */
 
@@ -153,7 +153,7 @@ users.ensureIndex({
 
 Now we can add the route:
 
-```ts
+```typescript
 // src/routes/hello.ts
 import joi from "joi";
 import { db } from "@arangodb";

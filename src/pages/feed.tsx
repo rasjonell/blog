@@ -5,15 +5,15 @@ import SEO from '../components/SEO';
 import Layout from '../components/Layout';
 
 const FeedPage: React.FC<PageProps<Queries.FeedPageQuery>> = ({ data }) => {
-  const mastodon = data.allFeedMastodon.nodes.map((node) => ({
-    ...node,
-    source: 'Mastodon',
-    pubDate: new Date(node.pubDate || ''),
-  }));
+  // const mastodon = data.allFeedMastodon.nodes.map((node) => ({
+  //   ...node,
+  //   source: 'Mastodon',
+  //   pubDate: new Date(node.pubDate || ''),
+  // }));
 
-  const mixedContent: typeof mastodon = [
-    ...mastodon,
-    ...data.allMdx.nodes.map((post): typeof mastodon[0] => ({
+  const mixedContent = [
+    // ...mastodon,
+    ...data.allMdx.nodes.map((post) => ({
       id: post.id,
       source: 'Personal Blog',
       link: `/blog/${post.frontmatter?.slug}`,
@@ -48,14 +48,14 @@ export const Head: HeadFC = () => <SEO title="Feed" />;
 
 export const query = graphql`
   query FeedPage {
-    allFeedMastodon {
-      nodes {
-        id
-        link
-        pubDate
-        contentSnippet
-      }
-    }
+    # allFeedMastodon {
+    #   nodes {
+    #     id
+    #     link
+    #     pubDate
+    #     contentSnippet
+    #   }
+    # }
     allMdx(sort: { frontmatter: { date: DESC } }) {
       nodes {
         frontmatter {

@@ -1,5 +1,5 @@
+import { Link } from 'gatsby';
 import React, { PropsWithChildren } from 'react';
-import { Link, useStaticQuery, graphql } from 'gatsby';
 
 import * as styles from './style.module.css';
 import useSiteTitle from '../../graphql/useSiteTitle';
@@ -16,7 +16,7 @@ const Layout: React.FC<LayoutProps> = ({ pageTitle, active, children }) => {
 
   return (
     <div className={styles.container}>
-      <header className={styles.siteTitle}>{siteTitle}.</header>
+      <header className={styles.siteTitle}>{siteTitle}</header>
       <nav>
         <ul className={styles.navLinks}>
           <li className={`${styles.navLinkItem} ${isActive('Home') && styles.active}`}>
