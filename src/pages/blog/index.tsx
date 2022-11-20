@@ -37,4 +37,4 @@ export const query = graphql`
   }
 `;
 
-export const Head: HeadFC = () => <SEO title="Home Page" />;
+export const Head: HeadFC = () => <SEO title="Blog" />;

@@ -1,4 +1,4 @@
-import { Link } from 'gatsby';
+import { Link, navigate } from 'gatsby';
 import React, { PropsWithChildren } from 'react';
 
 import * as styles from './style.module.css';
@@ -14,9 +14,13 @@ const Layout: React.FC<LayoutProps> = ({ pageTitle, active, children }) => {
 
   const isActive = (tab: string): boolean => active === tab;
 
+  const handleSiteTitleClick = () => navigate('/');
+
   return (
     <div className={styles.container}>
-      <header className={styles.siteTitle}>{siteTitle}</header>
+      <header className={styles.siteTitle} onClick={handleSiteTitleClick}>
+        {siteTitle}
+      </header>
       <nav>
         <ul className={styles.navLinks}>
           <li className={`${styles.navLinkItem} ${isActive('Home') && styles.active}`}>

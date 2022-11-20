@@ -21,6 +21,7 @@
 .site-title {
   margin: 3rem 0;
   font-size: 3rem;
+  cursor: pointer;
   font-weight: 700;
 }
 
