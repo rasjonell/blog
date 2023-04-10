@@ -1,6 +1,6 @@
 .container {
   margin: auto;
-  max-width: 500px;
+  max-width: 600px;
   font-family: sans-serif;
 }
 
@@ -28,4 +28,10 @@
 .active {
   font-weight: bold;
   text-decoration: underline;
+}
+
+span {
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }

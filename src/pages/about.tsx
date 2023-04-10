@@ -7,9 +7,9 @@ import Layout from '../components/Layout';
 const AboutPage: React.FC<PageProps> = () => (
   <Layout pageTitle="About Me" active="About">
     <p>
-      Yerevan-based Software Engineer Building Web and Mobile Solutions @{' '}
-      <a href="https://hearme.app/" target="_blank">
-        HearMe
+      I Write Software @{' '}
+      <a href="https://miro.com/" target="_blank">
+        Miro
       </a>
     </p>
     <p>I'm interested in Graph Databases, Recommender Systems, and Functional Programming.</p>
